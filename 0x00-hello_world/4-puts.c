@@ -1,7 +1,9 @@
 #include <stdio.h>
-
-int main()
+/**
+ * my first program in betty styling
+ **/
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
-	return 0;
+	return (0);
 }
