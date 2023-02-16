@@ -1,16 +1,13 @@
 #include <stdio.h>
 /**
- * main()
- * my first program in betty styling programm
- * The entry funtion: main();
- * takes no argument
+ * main - Entry point
+ *
+ * Desription: 'writing by first betty documentations and styling
+ *
+ * Return: zero upon success
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");	
-	/**
-	 * the return statement
-	 * returns 0 upon successfully comletion
-	 */
-	return(0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
