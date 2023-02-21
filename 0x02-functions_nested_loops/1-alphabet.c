@@ -1,5 +1,4 @@
-/*#include "main.h"*/
-
+#include "main.h"
 /**
  * main - main funciton Entry
  * Desc: prints lowercase charaters to console
