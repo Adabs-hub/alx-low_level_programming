@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - main funciton Entry
+ * print_alphabet - main funciton Entry
  * Desc: prints lowercase charaters to console
  * Author: Adabogo Emmanuel
  * Return: zero on success
