@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _abs - main Entry
+ * print_last_digit - main Entry
  *
  * @n: is an integer number
  *
- * Description: takes a number an returns an absolute value
+ * Description: takes a number an returns an last digit
  *
- * Return: return the absolute value
+ * Return: return last digit
  */
 
-int _abs(int n)
+int print_last_digit(int n)
 {
 	int l_digit;
 
 	l_digit = n % 10;
+	_putchar(l_digit + '0');
 	return (l_digit);
 }
