@@ -8,8 +8,10 @@
  */
 void print_alphabet(void);
 void jack_bauer(void);
+void times_table(void);
 void print_alphabet_x10(void);
 int _putchar(char c);
+int add(int n, int m);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
