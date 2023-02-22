@@ -20,9 +20,9 @@ void print_to_98(int n)
 		while (i <= 98)
 		{
 			if (i != 98)
-			printf("%d, ", i);
+				_putchar(i + '0');
 			else if (i == 98)
-			printf("%d\n", i);
+				_putchar(i + '0');
 			i++;
 		}
 	}
@@ -32,9 +32,9 @@ void print_to_98(int n)
 		while (j >= 98)
 		{
 			if (j != 98)
-			printf("%d, ", j);
+				_putchar(j + '0');
 			else if (j == 98)
-			printf("%d\n", j);
+				_putchar(j + '0');
 			j--;
 		}
 	}
