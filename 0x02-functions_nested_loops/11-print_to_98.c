@@ -43,7 +43,7 @@ void print_to_98(int n)
 				_putchar((j / 10) + '0');
 				_putchar((j % 10) + '0');
 			}
-			else if (i == 98)
+			else if (j == 98)
 			{
 				_putchar((j / 10) + '0');
 				_putchar((j % 10) + '0');
