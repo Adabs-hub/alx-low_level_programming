@@ -3,7 +3,7 @@
 /**
  * print_sign - main Entry
  *
- * @c: is an integer number
+ * @n: is an integer number
  *
  * Description: indicates the sign of a number and zero if zero
  *
@@ -22,7 +22,8 @@ int print_sign(int n)
 		_putchar('-');
 		return (-1);
 	}
-	else{
+	else
+	{
 		_putchar('0');
 		return (0);
 	}
