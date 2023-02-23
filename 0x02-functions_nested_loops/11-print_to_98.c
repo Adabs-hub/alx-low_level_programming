@@ -42,7 +42,7 @@ void print_to_98(int n)
 			Print(i);
 			_putchar(',');
 			_putchar(' ');
-			i++
+			i++;
 		}
 		_putchar('\n');
 	}
