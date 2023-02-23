@@ -30,20 +30,25 @@ void Print(int n)
 void print_times_table(int n)
 {
 	int i = 0, j = 0;
-		
+
 		while (i < n + 1)
 		{
 			while (j < n + 1)
 			{
-				Print(j + i);
+				if (i == 0)
+					Print(i);
+				else
+					Print(j + i);
 				if (j != n)
 				{
 					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 				}
 				j++;
 			}
 			_putchar('\n');
 			i++;
+			j = 0;
 		}
 }
