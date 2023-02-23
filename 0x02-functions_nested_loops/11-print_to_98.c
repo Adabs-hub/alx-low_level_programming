@@ -1,4 +1,23 @@
 #include "main.h"
+/**
+ * Print - prints integers numbers
+ *
+ * @n: inter to print to console
+ * 
+ * Return nothin
+ */
+void Print(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	if (n/10)
+		Print(n);
+	_putchar(n % 10 + '0');
+}
+
 
 /**
  * print_to_98 - main Entry
@@ -17,39 +36,26 @@ void print_to_98(int n)
 	if (n <= 98)
 	{
 		i = n;
+		
 		while (i <= 98)
 		{
-			if (i != 98)
-			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-			}
-			else if (i == 98)
-			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-				_putchar('\n');
-			}
-			i++;
+			Print(i);
+			_putchar(',');
+			_putchar(' ');
+			i++
 		}
+		_putchar('\n');
 	}
 	else if (n >= 98)
 	{
 		j = n;
 		while (j >= 98)
 		{
-			if (j != 98)
-			{
-				_putchar((j / 10) + '0');
-				_putchar((j % 10) + '0');
-			}
-			else if (j == 98)
-			{
-				_putchar((j / 10) + '0');
-				_putchar((j % 10) + '0');
-				_putchar('\n');
-			}
+			Print(j);
+			_putchar(',');
+			_putchar(' ');
 			j--;
 		}
+		_putchar('\n');
 	}
 }
