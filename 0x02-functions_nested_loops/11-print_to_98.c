@@ -52,7 +52,7 @@ void print_to_98(int n)
 		while (j >= 98)
 		{
 			Print(j);
-			if (i != 98)
+			if (j != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
