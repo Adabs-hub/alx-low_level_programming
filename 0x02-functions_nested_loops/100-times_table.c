@@ -42,9 +42,19 @@ void print_times_table(int n)
 				if (j != n)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					if (j * i < 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
+					else if (j * i < 100)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					else
+						_putchar(' ');
 				}
 				j++;
 			}
