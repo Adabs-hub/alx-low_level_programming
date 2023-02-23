@@ -37,7 +37,7 @@ void print_to_98(int n)
 		while (i <= 98)
 		{
 			Print(i);
-			if ( i != 98)
+			if (i != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -52,8 +52,11 @@ void print_to_98(int n)
 		while (j >= 98)
 		{
 			Print(j);
-			_putchar(',');
-			_putchar(' ');
+			if (i != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			j--;
 		}
 		_putchar('\n');
