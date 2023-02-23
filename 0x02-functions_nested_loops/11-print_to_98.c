@@ -3,7 +3,7 @@
  * Print - prints integers numbers
  *
  * @n: inter to print to console
- * 
+ *
  * Return nothin
  */
 void Print(int n)
@@ -13,11 +13,10 @@ void Print(int n)
 		_putchar('-');
 		n = -n;
 	}
-	if (n/10)
+	if (n / 10)
 		Print(n / 10);
 	_putchar(n % 10 + '0');
 }
-
 
 /**
  * print_to_98 - main Entry
@@ -28,7 +27,6 @@ void Print(int n)
  *
  * Return: nothing
  */
-
 void print_to_98(int n)
 {
 	int i, j;
@@ -36,12 +34,14 @@ void print_to_98(int n)
 	if (n <= 98)
 	{
 		i = n;
-		
 		while (i <= 98)
 		{
 			Print(i);
-			_putchar(',');
-			_putchar(' ');
+			if ( i != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			i++;
 		}
 		_putchar('\n');
