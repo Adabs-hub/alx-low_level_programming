@@ -35,27 +35,36 @@ void print_times_table(int n)
 		{
 			while (j < n + 1)
 			{
-				if (i == 0)
-					Print(0);
-				else
-					Print(j * i);
-				if (j != n)
+				if (j == 0)
 				{
-					_putchar(',');
-					if (j * i < 10)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
-					else if (j * i < 100)
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
-					else
-						_putchar(' ');
+					Print(0);
+					_putchar(',')
 				}
+				else
+					if (j != n)
+					{
+						if (j * i < 10 && j * i == 0)
+						{
+							_putchar(' ');
+							_putchar(' ');
+							_putchar(' ');
+							Print(j * i);
+							_print(',');
+						}
+						else if (j * i < 100)
+						{
+							_putchar(' ');
+							_putchar(' ');
+							Print(j * i);
+							_print(',');
+						}
+						else
+						{
+							_putchar(' ');
+							Print(j * i);
+							_putchar(',');
+						}
+					}
 				j++;
 			}
 			_putchar('\n');
