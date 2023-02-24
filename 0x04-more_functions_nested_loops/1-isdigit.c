@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * _isupper - detects uppercase letters
+ * _isdigit - detects digit
  *
- * @c: takes in a cha
+ * @c: takes in a char
  *
- * Return: return 1 for uppercase and 0 otherwise
+ * Return: return 1 for digit and 0 otherwise
+int convert_day(int, int);
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int i;
 
