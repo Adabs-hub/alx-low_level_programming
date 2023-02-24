@@ -15,7 +15,7 @@ void most_numbers(void)
 
 	while (j < 10)
 	{
-		for (i = 0;  i <= 20; i++)
+		for (i = 0;  i < 20; i++)
 			_putchar(str[i]);
 	_putchar('\n');
 	j++;
