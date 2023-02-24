@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * Print - prints integers numbers
+ *
+ * @n: inter to print to console
+ *
+ * Return nothin
+ */
+void Print(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	if (n / 10)
+	Print(n / 10);
+	_putchar(n % 10 + '0');
+}
+
+/**
  * most_numbers - print 0 to 9
  *
  * Description: print 1 to 14
@@ -10,13 +29,12 @@
 
 void most_numbers(void)
 {
-	char str[] = "01234567891011121314";
 	int i, j = 0;
 
 	while (j < 10)
 	{
-		for (i = 0;  i < 20; i++)
-			_putchar(str[i]);
+		for (i = 0;  i < 15; i++)
+			Print(i);
 	_putchar('\n');
 	j++;
 	}
