@@ -20,7 +20,7 @@ void Print(int n)
 }
 
 /**
- * most_numbers - print 0 to 9
+ * more_numbers - print 0 to 9
  *
  * Description: print 1 to 14
  *
