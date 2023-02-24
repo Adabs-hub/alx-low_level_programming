@@ -6,7 +6,6 @@
  * @c: takes in a char
  *
  * Return: return 1 for digit and 0 otherwise
-int convert_day(int, int);
  */
 
 int _isdigit(int c)
