@@ -43,7 +43,7 @@ void print_times_table(int n)
 				else
 					if (j != n)
 					{
-						if (j * i < 10 && j * i == 0)
+						if (j * i < 10 && j * i >= 0)
 						{
 							_putchar(' ');
 							_putchar(' ');
@@ -51,7 +51,7 @@ void print_times_table(int n)
 							Print(j * i);
 							_putchar(',');
 						}
-						else if (j * i < 100)
+						else if (j * i < 100 && j * i > 9)
 						{
 							_putchar(' ');
 							_putchar(' ');
