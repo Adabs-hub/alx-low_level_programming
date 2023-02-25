@@ -19,6 +19,55 @@ void Print(int n)
 }
 
 /**
+ * table - prints table
+ *
+ * @i: first argument_with of table
+ * @j: secont argument _length of table
+ * @n: third argument _ integer for multiplication
+ *
+ * return: nothing
+ */
+
+void table(int *i, int *j, int n)
+{
+	if (j == 0)
+	{
+		Print(0);
+		if (j != i)
+			_putchar(',');
+	}
+	else
+		if (j != n)
+		{
+			if (j * i < 10 && j * i >= 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				Print(j * i);
+				if (j != i)
+					_putchar(',');
+			}
+			else if (j * i < 100 && j * i > 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				Print(j * i);
+				if (j != i)
+					_putchar(',');
+			}
+			else
+			{
+				_putchar(' ');
+				Print(j * i);
+				if (j != i)
+					_putchar(',');
+			}
+		}
+	j++;
+}
+
+/**
  * print_times_table - main Entry
  *
  * @n: reference point of counting integers
@@ -27,6 +76,7 @@ void Print(int n)
  *
  * Return: nothing
  */
+
 void print_times_table(int n)
 {
 	int i = 0, j = 0;
@@ -35,37 +85,7 @@ void print_times_table(int n)
 		{
 			while (j < n + 1)
 			{
-				if (j == 0)
-				{
-					Print(0);
-					_putchar(',');
-				}
-				else
-					if (j != n)
-					{
-						if (j * i < 10 && j * i >= 0)
-						{
-							_putchar(' ');
-							_putchar(' ');
-							_putchar(' ');
-							Print(j * i);
-							_putchar(',');
-						}
-						else if (j * i < 100 && j * i > 9)
-						{
-							_putchar(' ');
-							_putchar(' ');
-							Print(j * i);
-							_putchar(',');
-						}
-						else
-						{
-							_putchar(' ');
-							Print(j * i);
-							_putchar(',');
-						}
-					}
-				j++;
+				table(&i, &j, n);
 			}
 			_putchar('\n');
 			i++;
