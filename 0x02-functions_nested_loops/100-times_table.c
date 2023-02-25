@@ -30,41 +30,41 @@ void Print(int n)
 
 void table(int *i, int *j, int n)
 {
-	if (j == 0)
+	if (*j == 0)
 	{
 		Print(0);
-		if (j != i)
+		if (*j != *i)
 			_putchar(',');
 	}
 	else
-		if (j != n)
+		if (*j != n)
 		{
-			if (j * i < 10 && j * i >= 0)
+			if (*j * *i < 10 && *j * *i >= 0)
 			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
-				Print(j * i);
-				if (j != i)
+				Print(*j * *i);
+				if (*j != *i)
 					_putchar(',');
 			}
-			else if (j * i < 100 && j * i > 9)
+			else if (*j * *i < 100 && *j * *i > 9)
 			{
 				_putchar(' ');
 				_putchar(' ');
-				Print(j * i);
-				if (j != i)
+				Print(*j * *i);
+				if (*j != *i)
 					_putchar(',');
 			}
 			else
 			{
 				_putchar(' ');
-				Print(j * i);
-				if (j != i)
+				Print(*j * *i);
+				if (*j != *i)
 					_putchar(',');
 			}
 		}
-	j++;
+	++*j;
 }
 
 /**
