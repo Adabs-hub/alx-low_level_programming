@@ -33,7 +33,7 @@ void table(int *i, int *j, int n)
 	if (*j == 0)
 	{
 		Print(0);
-		if (*j == n)
+		if (*j != n)
 			_putchar(',');
 	}
 	else
@@ -44,7 +44,7 @@ void table(int *i, int *j, int n)
 			_putchar(' ');
 			_putchar(' ');
 			Print(*j * *i);
-			if (*j == n)
+			if (*j != n)
 				_putchar(',');
 		}
 		else if (*j * *i < 100 && *j * *i > 9)
@@ -52,14 +52,14 @@ void table(int *i, int *j, int n)
 			_putchar(' ');
 			_putchar(' ');
 			Print(*j * *i);
-			if (*j == n)
+			if (*j != n)
 				_putchar(',');
 		}
 		else
 		{
 			_putchar(' ');
 			Print(*j * *i);
-			if (*j == n)
+			if (*j != n)
 				_putchar(',');
 		}
 	}
