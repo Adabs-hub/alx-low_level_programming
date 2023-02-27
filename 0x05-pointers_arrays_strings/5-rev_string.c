@@ -18,13 +18,14 @@ void rev_string(char *s)
 		i++;
 	}
 	i--;
-	char tmp[i];
+	char *tmp;
 
 	while (i >= 0)
 	{
-		tmp[j] = s[i]
+		tmp[j] = s[i];
 		i--;
 		j++;
 	}
-	s = &tmp;
+	tmp[j +1] = '\0';
+	s = tmp;
 }
