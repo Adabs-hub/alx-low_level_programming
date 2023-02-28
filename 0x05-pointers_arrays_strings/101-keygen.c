@@ -12,7 +12,7 @@ int main(void)
 {
 	char passwd[84];
 	int i = 0, sum = 0;
-	int first_diff, second_diff;
+	int second_diff;
 
 	srand(time(0));
 	while (sum < 2772)
@@ -23,7 +23,6 @@ int main(void)
 	passwd[i] = '\0';
 	if (sum != 2771)
 	{
-		first_diff = (sum - 2772) / 2;
 		second_diff = (sum - 2772) / 2;
 		if ((sum - 2772) % 2 != 0)
 			for (i = 0; passwd[i]; i++)
