@@ -10,24 +10,25 @@
 
 int main(void)
 {
-	char passwd[84];
-	int i = 0, sum = 0;
-	int second_diff;
+	int pass[100];
+	int i, sum, n;
 
-	srand(time(0));
-	while (sum < 2772)
+	sum = 0;
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		passwd[i] = 33 + rand() % 94;
-		sum += passwd[i++];
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-	passwd[i] = '\0';
-	if (sum != 2772)
-	{
-		second_diff = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			for (i = 0; passwd[i]; i++)
-				passwd[i] -= second_diff;
-	}
-	printf("%s", passwd);
 	return (0);
 }
