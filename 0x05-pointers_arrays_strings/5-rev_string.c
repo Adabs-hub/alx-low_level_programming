@@ -12,14 +12,14 @@
 void rev_string(char *s)
 {
 	int i = 0, j = 0;
+	char *tmp = "";
 
 	while (s[i] != '\0')
 	{
 		i++;
 	}
+	tmp = (char *) malloc(i);
 	i--;
-	char tmp[i + 1] = {'\0'};
-
 	while (i >= 0)
 	{
 		tmp[j] = *(s + i);
