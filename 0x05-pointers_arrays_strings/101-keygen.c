@@ -21,7 +21,7 @@ int main(void)
 		sum += passwd[i++];
 	}
 	passwd[i] = '\0';
-	if (sum != 2771)
+	if (sum != 2772)
 	{
 		second_diff = (sum - 2772) / 2;
 		if ((sum - 2772) % 2 != 0)
