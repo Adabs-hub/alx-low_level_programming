@@ -11,25 +11,15 @@
 
 void rev_string(char *s)
 {
-	int i = 0, j = 0;
-	char *tmp = "";
+	int size, j = 0;
+	char tmp;
 
-	while (s[i] != '\0')
+	size = _strlength(s);
+	for (j = 0; j < size / 2; j++)
 	{
-		i++;
-	}
-	tmp = (char *) malloc(i);
-	i--;
-	while (i >= 0)
-	{
-		tmp[j] = *(s + i);
-		i--;
-		j++;
-	}
-	for (i = 0; i < j; i++)
-	{
-		*(s + i) = tmp[j];
-		j--;
+		tmp = s[j];
+		s[j] = s[size - j - 1];
+		s[size - j - 1] = tmp;
 	}
 
 }
