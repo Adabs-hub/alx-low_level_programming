@@ -11,5 +11,6 @@ void puts2(char *str);
 void print_array(int *a, int n);
 void puts_half(char * s);
 int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 
 #endif /*MAIN_H*/
