@@ -39,7 +39,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	dest_sz = _strlen(dest);
 	src_sz = _strlen(src);
-	while (i < n && n <= src_sz)
+	while (i < n && n <= src_sz && n > 0)
 	{
 		dest[dest_sz] = src[i];
 		i++;
