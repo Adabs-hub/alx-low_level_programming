@@ -37,8 +37,6 @@ char *_strcat(char *dest, char *src)
 
 	dest_sz = _strlen(dest);
 	src_sz = _strlen(src);
-	dest[dest_sz] = ' ';
-	dest_sz++;
 	while (i < src_sz)
 	{
 		dest[dest_sz] = src[i];
