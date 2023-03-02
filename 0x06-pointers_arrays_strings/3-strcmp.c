@@ -33,14 +33,20 @@ int _strlen(char *s)
 
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len = 0, s2_len = 0;
+	int i = 0, result, s1_len = 0, s2_len = 0;
 
 	s1_len = _strlen(s1);
 	s2_len = _strlen(s2);
-	if (s1_len > s2_len)
-		return (15);
-	else if (s1_len < s2_len)
-		return (-15);
+	if (s1_len <= s2_len)
+		len = s1_len;
 	else
-		return (0);
+		len = s2_len;
+	while (i <= len)
+	{
+		result = s1[i] - s2[1];
+		if (result != 0)
+			return (result);
+		i++;
+	}
+	return (result);
 }
