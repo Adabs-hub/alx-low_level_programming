@@ -35,11 +35,10 @@ int _strlen(char *s)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, dest_sz = 0, src_sz = 0;
+	int i = 0, dest_sz = 0;
 
 	dest_sz = _strlen(dest);
-	src_sz = _strlen(src);
-	while (i < n && n < src_sz)
+	while (i < n)
 	{
 		dest[dest_sz] = src[i];
 		i++;
