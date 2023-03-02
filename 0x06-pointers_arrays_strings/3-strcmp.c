@@ -33,7 +33,7 @@ int _strlen(char *s)
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0, result, s1_len = 0, s2_len = 0;
+	int i = 0, result = 0, len, s1_len = 0, s2_len = 0;
 
 	s1_len = _strlen(s1);
 	s2_len = _strlen(s2);
@@ -43,7 +43,7 @@ int _strcmp(char *s1, char *s2)
 		len = s2_len;
 	while (i <= len)
 	{
-		result = s1[i] - s2[1];
+		result = s1[i] - s2[i];
 		if (result != 0)
 			return (result);
 		i++;
