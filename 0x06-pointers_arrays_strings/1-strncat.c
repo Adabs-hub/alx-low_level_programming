@@ -39,13 +39,12 @@ char *_strncat(char *dest, char *src, int n)
 
 	dest_sz = _strlen(dest);
 	src_sz = _strlen(src);
-	while (i < n)
+	while (i < n && n < src_sz)
 	{
-		if (i == src_sz - 1)
-			break;
 		dest[dest_sz] = src[i];
 		i++;
 		dest_sz++;
 	}
+	dest[dest_sz] = '\0';
 	return (dest);
 }
