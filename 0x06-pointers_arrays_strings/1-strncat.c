@@ -38,7 +38,7 @@ char *_strncat(char *dest, char *src, int n)
 	int i = 0, dest_sz = 0;
 
 	dest_sz = _strlen(dest);
-	while (i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[dest_sz] = src[i];
 		i++;
