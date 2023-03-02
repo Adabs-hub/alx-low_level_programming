@@ -33,8 +33,8 @@ char *string_toupper(char *str)
 {
 	int i = 0, str_len = 0;
 
-	str_len = _strlen(dest);
-	while (i < src_sz)
+	str_len = _strlen(str);
+	while (i < str_len)
 	{
 		if (str[i] >= 97 && str[i] <= 122)
 			str[i] = str[i] - 32;
