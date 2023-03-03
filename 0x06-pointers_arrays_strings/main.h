@@ -10,6 +10,7 @@ char *string_toupper(char *str);
 char *cap_string(char *str);
 char *leet(char *str);
 char *rot13(char *str);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 int _strcmp(char *s1, char *s2);
 int _atoi(char *s);
 void reverse_array(int *a, int n);
