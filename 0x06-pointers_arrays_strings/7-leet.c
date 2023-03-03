@@ -8,7 +8,7 @@ include "main.h"
  * Return: modified char
  */
 
-char *leet(char *str) 
+char *leet(char *str)
 {
 	char key[] = "4433007711";
 	char code[] = "aAeEoOtTlL";
@@ -18,7 +18,7 @@ char *leet(char *str)
 	{
 		while (j < 10)
 		{
-			if ( str[i] == code[j])
+			if (str[i] == code[j])
 				str[i] = key[j];
 			j++;
 		}
