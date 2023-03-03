@@ -13,5 +13,6 @@ char *rot13(char *str);
 int _strcmp(char *s1, char *s2);
 int _atoi(char *s);
 void reverse_array(int *a, int n);
+void print_number(int n);
 
 #endif /*MAIN_H*/
