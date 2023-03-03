@@ -14,6 +14,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 int _strcmp(char *s1, char *s2);
 int _atoi(char *s);
 void reverse_array(int *a, int n);
+void print_buffer(char *b, int size);
 void print_number(int n);
 
 #endif /*MAIN_H*/

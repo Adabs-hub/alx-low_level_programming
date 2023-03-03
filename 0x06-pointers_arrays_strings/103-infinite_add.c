@@ -27,7 +27,7 @@ void rev_string(char *n)
 }
 
 /**
- * infinite_add - sums 2 numbers 
+ * infinite_add - sums 2 numbers
  * @n1: first arg_ and number. integer in text format
  * @n2: second arg_ and number. integer in text format
  * @r: pointer to buffer
