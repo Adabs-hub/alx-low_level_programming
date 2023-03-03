@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * rot13 - selective charaters to int
  *
@@ -18,8 +18,8 @@ char *rot13(char *str)
 	{
 		while (j < 52)
 		{
-			if (str[i] == code[j])
-				str[i] = key[j];
+			if (str[i] == key[j])
+				str[i] = code[j];
 			j++;
 		}
 		j = 0;
