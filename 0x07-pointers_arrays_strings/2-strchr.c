@@ -10,14 +10,14 @@
  * Return: first occurance of char c
  */
 
-char *_stchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	unsigned int i = 0;
 
 	while (s[i] != c)
 	{
 		if (s[i] == '\0')
-			return (NULL);
+			return (0);
 		i++;
 	}
 	return (&s[i]);
