@@ -22,7 +22,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				if (first_byte == 0)
+				if (first_byte == 0 || first_byte > &s[i])
 					first_byte = &s[i];
 				break;
 			}
