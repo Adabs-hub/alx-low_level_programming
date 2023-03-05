@@ -26,7 +26,7 @@ char *_strpbrk(char *s, char *accept)
 					first_byte = (s + i);
 				return (first_byte);
 			}
-			j++
+			j++;
 		}
 		i++;
 		j = 0;
