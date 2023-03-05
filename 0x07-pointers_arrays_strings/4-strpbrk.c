@@ -14,7 +14,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i = 0, j = 0;
-	char *first_byte = 0;
+	char *first_byte = NULL;
 
 	while (s[i] != '\0')
 	{
@@ -22,21 +22,14 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				if (first_byte == 0 || first_byte > &s[i])
-					first_byte = &s[i];
-				break;
+				if (first_byte == 0 || first_byte < &s[i])
+					first_byte = (s + i);
+				return (first_byte);
 			}
-			else
-				first_byte = 0;
-			if (accept[j + 1] != '\0')
-			{
-				j++;
-				continue;
-			}
-			return (first_byte);
+			j++
 		}
 		i++;
 		j = 0;
 	}
-	return (first_byte);
+	return (0);
 }
