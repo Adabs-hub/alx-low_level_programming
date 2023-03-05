@@ -18,18 +18,25 @@ char *_strpbrk(char *s, char *accept)
 
 	while (s[i] != '\0')
 	{
-		while (accept[j] == s[i + j])
+		while (accept[j] != '\0')
 		{
-			if (first_byte == 0)
-				first_byte = (s + i);
-			if (accept[j + 1] == '\0')
-				return (first_byte);
-			j++;
+			if (s[i] == accept[j])
+			{
+				if (first_byte = 0)
+					first_byte = &s[i];
+				break;
+			}
+			else
+				first_byte = 0;
+			if (accept[j + 1] != '\0')
+			{
+				j++;
+				continue;
+			}
+			return (first_byte);
 		}
-		first_byte = 0;
 		i++;
 		j = 0;
-
 	}
 	return (first_byte);
 }
