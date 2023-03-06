@@ -14,7 +14,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	unsigned long f_sum = 0, b_sum = 0;
+	int f_sum = 0, b_sum = 0;
 
 	for (i = 0; i < size; i++)
 	{
@@ -26,5 +26,5 @@ void print_diagsums(int *a, int size)
 				b_sum += *(a + (i * size + j));
 		}
 	}
-	printf("%lu, %lu\n", f_sum, b_sum);
+	printf("%d, %d\n", f_sum, b_sum);
 }
