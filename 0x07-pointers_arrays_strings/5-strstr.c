@@ -21,7 +21,7 @@ char *_strstr(char *haystack, char *needle)
 		while (needle[j] == haystack[i + j])
 		{
 			if (first_byte == 0)
-				first_byte = (haystack + i);
+				first_byte = &haystack[i];
 			if (needle[j + 1] == '\0')
 				return (first_byte);
 			j++;
