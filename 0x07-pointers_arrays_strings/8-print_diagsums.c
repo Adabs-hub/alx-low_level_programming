@@ -22,9 +22,9 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 				f_sum += *(a + (i * size + j));
-			if (j == size - i)
+			if (j == size - 1 - i)
 				b_sum += *(a + (i * size + j));
 		}
 	}
-	printf("%lu, %lu", f_sum, b_sum);
+	printf("%lu, %lu\n", f_sum, b_sum);
 }
