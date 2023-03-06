@@ -12,11 +12,5 @@
 
 void set_string(char **s, char *to)
 {
-	int i = 0;
-
-	while (*(to + i) == '\0')
-	{
-		(*(*(s + i))) = (*(to + i));
-		i++;
-	}
+	*s = to;
 }
