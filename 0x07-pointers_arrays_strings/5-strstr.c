@@ -11,7 +11,7 @@
  * matches one of the bytes in needle
  */
 
-char *_ststr(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i = 0, j = 0;
 	char *first_byte = 0;
