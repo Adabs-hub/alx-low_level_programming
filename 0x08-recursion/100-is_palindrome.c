@@ -71,7 +71,7 @@ int is_palindrome(char *s)
 	char str[100] = {'\0'};
 	int size = _strlen_recursion(s);
 
-	if (size == 0)
+	if (size == 0 || size > 15)
 		return (1);
 	rev_string(str, s, size);
 	return (_str_compare(str, s));
