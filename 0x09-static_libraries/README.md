@@ -1,32 +1,33 @@
-# 0x09. C - Static libraries
-**C**
-> -By: Julien Barbier
-> - Weight: 1
-> - Project will start Mar 10, 2023 6:00 AM, must end by Mar 11, 2023 6:00 AM
-> - Checker was released at Mar 10, 2023 12:00 PM
-> - An auto review will be launched at the deadline
+# 0x07. C - Even more pointers, arrays and strings
 
-#### Concepts
-For this project, we expect you to look at this concept:
-- C static libraries
+  *By: Julien Barbier
+ Weight: 1
+ Project will start Mar 3, 2023 6:00 AM, must end by Mar 7, 2023 6:00 AM
+ Checker was released at Mar 4, 2023 6:00 AM
+ An auto review will be launched at the deadline*
+
+### Concepts
+**For this project, we expect you to look at this concept:*
+
+- Pointers and arrays
+
+![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/218/58fe6b229144b7fe5ebe88afe9ff5cabe2dd0863e1e79b2d02b4103c30b465dd.jpg)
 
 # Resources
 **Read or watch:**
-- What Is A “C” Library? What Is It Good For?
-- Creating A Static “C” Library Using “ar” and “ranlib”
-- Using A “C” Library In A Program
-- What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44)
-**man or help:**
-- ar
-- ranlib
-- nm
+
+- C - Pointer to Pointer
+- C – Pointer to Pointer with example
+- Multi-dimensional Arrays in C
+- Two dimensional (2D) arrays in C programming with example
 
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, **without the help of Google:**
 
 ## General
-- What is a static library, how does it work, how to create one, and how to use it
-- Basic usage of ar, ranlib, nm
+- What are pointers to pointers and how to use them
+- What are multidimensional arrays and how to use them
+- What are the most common C standard library functions to manipulate strings
 
 ## Copyright - Plagiarism
 - You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
@@ -35,14 +36,14 @@ At the end of this project, you are expected to be able to explain to anyone, **
 - Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
 # Requirements
-## C
+## General
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - All your files should end with a new line
 - A README.md file, at the root of the folder of the project is mandatory
 - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 - You are not allowed to use global variables
-- No more than 5 functions per file
+No more than 5 functions per file
 - You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
 - You are allowed to use _putchar
 - You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
@@ -50,13 +51,5 @@ At the end of this project, you are expected to be able to explain to anyone, **
 - The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 - Don’t forget to push your header file
 
-## Bash
-- Allowed editors: vi, vim, emacs
-- All your scripts will be tested on Ubuntu 20.04 LTS
-- All your files should end with a new line (why?)
-- The first line of all your files should be exactly #!/bin/bash
-- A README.md file, at the root of the folder of the project, describing what each script is doing
-- All your files must be executable
-
-# More Info
-You do not need to learn about dynamic libraries, yet.
+#More Info
+You do not need to learn about pointers to functions, arrays of structures, malloc and free - yet.
