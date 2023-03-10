@@ -3,11 +3,13 @@
 
 
 /**
- * _strlen_recursion - print string len
+ * wildcmp - compare a string is identical to another
  *
- * @s: first argument. source string
+ * @s1: first argument. source string
  *
- * Return: string length
+ * @s2: second argument. string to compare
+ *
+ * Return: one if they're identical 0 other wise
  */
 
 int wildcmp(char *s1, char *s2)
