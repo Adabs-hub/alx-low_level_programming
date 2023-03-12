@@ -13,43 +13,25 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, coins = 0;
+	int i = 0, n_coins = 0, change;
+	int coins[] = {25, 10, 5, 2, 1};
 
+	change = atoi(argv[argc - 1]);
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	cents = atoi(argv[1]);
-
-	while (cents > 0)
+	while (change != 0)
 	{
-		coins++;
-		if ((cents - 25) >= 0)
+		if (change >= coins[i])
 		{
-			cents -= 25;
-			continue;
+			n_coins += (change / coins[i]);
+			change = (change % coins[i]);
 		}
-		if ((cents - 10) >= 0)
-		{
-			cents -= 10;
-			continue;
-		}
-		if ((cents - 5) >= 0)
-		{
-			cents -= 5;
-			continue;
-		}
-		if ((cents - 2) >= 0)
-		{
-			cents -= 2;
-			continue;
-		}
-		cents--;
+		i++;
 	}
-
-	printf("%d\n", coins);
+	printf("%d\n", n_coins);
 
 	return (0);
 }
