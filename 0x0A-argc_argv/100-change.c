@@ -24,6 +24,8 @@ int main(int argc, char *argv[])
 	}
 	while (change != 0)
 	{
+		if (change < 0)
+			break;
 		if (change >= coins[i])
 		{
 			n_coins += (change / coins[i]);
