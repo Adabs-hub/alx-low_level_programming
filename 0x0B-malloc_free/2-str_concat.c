@@ -36,9 +36,14 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == 0 && s2 == 0)
 		i++;
 	else if (s1 == 0)
+	{
 		len1 = 0;
+		len2 = _strlen(s2);
+	}
 	else if (s2 == 0)
+	{
 		len2 = 0;
+		len1 = _strlen(s1);
 	else
 	{
 		len1 = _strlen(s1);
