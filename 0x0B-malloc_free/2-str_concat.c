@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	while (i < len1 + len2)
 	{
-		if (i < len1 && )
+		if (i < len1)
 			buffer[i] = s1[i];
 		else
 			buffer[i] = s2[i - len1];
