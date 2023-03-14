@@ -44,6 +44,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		len2 = 0;
 		len1 = _strlen(s1);
+	}
 	else
 	{
 		len1 = _strlen(s1);
