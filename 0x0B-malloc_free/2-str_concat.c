@@ -11,7 +11,7 @@
 
 int _strlen(char *str)
 {
-	int i = 1;
+	int i = 0;
 
 	while (str[i] != '\0')
 		i++;
@@ -33,7 +33,9 @@ char *str_concat(char *s1, char *s2)
 	char *buffer = 0;
 	int i = 0, len1 = 0, len2 = 0;
 
-	if (s1 == 0)
+	if (s1 == 0 && s2 == 0)
+		return (0);
+	else if (s1 == 0)
 		len1 = 0;
 	else if (s2 == 0)
 		len2 = 0;
@@ -42,12 +44,12 @@ char *str_concat(char *s1, char *s2)
 		len1 = _strlen(s1);
 		len2 = _strlen(s2);
 	}
-	buffer = (char *)malloc(sizeof(char) *	(len1 + len2));
+	buffer = (char *)malloc(sizeof(char) *	(len1 + len2) + 1);
 	if (buffer == 0)
 		return (0);
 	while (i < len1 + len2)
 	{
-		if (i < len1)
+		if (i < len1 && )
 			buffer[i] = s1[i];
 		else
 			buffer[i] = s2[i - len1];
