@@ -34,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, len1 = 0, len2 = 0;
 
 	if (s1 == 0 && s2 == 0)
-		return (0);
+		i++;
 	else if (s1 == 0)
 		len1 = 0;
 	else if (s2 == 0)
@@ -47,6 +47,8 @@ char *str_concat(char *s1, char *s2)
 	buffer = (char *)malloc(sizeof(char) *	(len1 + len2) + 1);
 	if (buffer == 0)
 		return (0);
+	if (i > 0)
+		return (buffer);
 	while (i < len1 + len2)
 	{
 		if (i < len1)
