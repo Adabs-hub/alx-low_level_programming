@@ -29,7 +29,5 @@ int **alloc_grid(int width, int height)
 			buffer[i][j] = 0;
 		j = 0;
 	}
-	printf("i = %d\n", i);
-	printf("j = %d\n", j);
 	return (buffer);
 }
