@@ -44,7 +44,7 @@ char *argstostr(int ac, char **av)
 		return (0);
 	}
 	i = 0;
-	while (i < len)
+	while (i < len + ac)
 	{
 		while (av[j][k] != '\0')
 		{
