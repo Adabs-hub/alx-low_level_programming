@@ -19,11 +19,11 @@ int _strlen(char *str)
 }
 
 /**
- * argstostr - concatenate two strings
+ * argstostr - concatatenate terminal argument to string
  *
- * @s1: first string
+ * @ac: first string
  *
- * @s2: second string
+ * @av: second string
  *
  * Return: NULL on failure and pointer to location in memory on success
  */
@@ -31,37 +31,31 @@ int _strlen(char *str)
 char *argstostr(int ac, char **av)
 {
 	char *buffer = 0;
-	int i = 0, len1 = 0, len2 = 0;
+	int i = 0, j = 0, k = 0, len = 0;
 
 	if (ac == 0 && av == 0)
-		i++;
-	else if (s1 == 0)
-	{
-		len1 = 0;
-		len2 = _strlen(s2);
-	}
-	else if (s2 == 0)
-	{
-		len2 = 0;
-		len1 = _strlen(s1);
-	}
-	else
-	{
-		len1 = _strlen(s1);
-		len2 = _strlen(s2);
-	}
-	buffer = (char *)malloc(sizeof(char) *	(len1 + len2) + 1);
-	if (buffer == 0)
 		return (0);
-	if (i > 0)
-		return (buffer);
-	while (i < len1 + len2)
+	for (i = 0; i < ac; i++)
+		len += _strlen(av[i]);
+	buffer = (char *)malloc(sizeof(char) *	(len + ac + 1);
+	if (buffer == 0)
 	{
-		if (i < len1)
-			buffer[i] = s1[i];
-		else
-			buffer[i] = s2[i - len1];
+		free(buffer);
+		return (0);
+	}
+	i = 0;
+	while (i < len)
+	{
+		while (av[j][k] != '\0')
+		{
+			buffer[i] = av[j][k];
+			k++;
+			i++;
+		}
+		buffer[i] = '\n';
 		i++;
+		j++;
+		k = 0;
 	}
 	return (buffer);
 }
