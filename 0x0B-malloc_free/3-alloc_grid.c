@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 	{
 		buffer[i] = malloc(sizeof(int) * height);
 		for (j = 0; j < height; j++)
-			*(buffer[i] * j) = 0;
+			*(buffer[i] + j) = 0;
 	}
 	return (buffer);
 }
