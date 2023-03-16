@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * _strlen - to fine string len
  *
@@ -55,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > len2)
 		n = len2;
 
-	buffer = malloc(sizeof(buffer) *	(len1 + n) + 1);
+	buffer = malloc(sizeof(char) *	(len1 + n) + 1);
 	if (buffer == 0)
 		return (0);
 	if (i > 0)
