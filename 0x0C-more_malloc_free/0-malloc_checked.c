@@ -11,7 +11,8 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void * buffer = malloc(b);
+	void *buffer = malloc(b);
+
 	if (!buffer)
 		noreturn void exit(98);
 	return (buffer);
