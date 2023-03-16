@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strlen - to fine string len
@@ -57,15 +58,25 @@ char **strtow(char *str)
 		return (0);
 	len = _strlen(str);
 	words = _wordslen(str);
-	wrd_arr = (char **)malloc(sizeof(char *) * words + 1);
-	for (i = 0; i < len; i++)
+	if (words == 0)
+	{
+		printf("failed\n");
+		return (0);
+	}
+	wrd_arr = (char **)malloc(sizeof(char *) * words);
+	if (!wrd_arr)
+	{
+		free(wrd_arr);
+		return (0);
+	}
+	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ')
 		{
 			i++;
 			continue;
 		}
-		while (str[ch_count + i] != ' ' && str[ch_count + 1] != '\0')
+		while (str[ch_count + i] != ' ' && str[ch_count + i + 1] != '\0')
 			ch_count++;
 		wrd_arr[k] = (char *)malloc(sizeof(char) * ch_count + 1);
 		for (j = 0; j < ch_count; j++)
@@ -79,4 +90,39 @@ char **strtow(char *str)
 
 	}
 	return (wrd_arr);
+}
+
+/**
+ * print_tab - Prints an array of string
+ * @tab: The array to print
+ *
+ * Return: nothing
+ */
+void print_tab(char **tab)
+{
+    int i;
+
+    for (i = 0; tab[i] != NULL; ++i)
+    {
+        printf("%s\n", tab[i]);
+    }
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: 1 if an error occurred, 0 otherwise
+ */
+int main(void)
+{
+    char **tab;
+
+    tab = strtow("Talk is cheap. Show me the code.");
+    if (tab == NULL)
+    {
+        printf("Failed\n");
+        return (1);
+    }
+    print_tab(tab);
+    return (0);
 }
