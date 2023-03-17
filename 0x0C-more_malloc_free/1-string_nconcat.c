@@ -55,7 +55,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > len2)
 		n = len2;
 
-	buffer = malloc(sizeof(char) *	(len1 + n) + 1);
+	buffer = malloc(sizeof(char) *	(len1 + n + 1));
 	if (buffer == 0)
 		return (0);
 	if (i > 0)
@@ -65,7 +65,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < len1)
 			buffer[i] = s1[i];
 		else
-			buffer[i] = s2[i - len1];
+			buffer[i] = s2[i - n];
 		i++;
 	}
 	buffer[i] = '\0';
