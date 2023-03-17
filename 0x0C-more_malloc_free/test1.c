@@ -68,5 +68,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			buffer[i] = s2[i - len1];
 		i++;
 	}
+	buffer[i] = '\0';
 	return (buffer);
 }
