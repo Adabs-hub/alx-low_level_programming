@@ -19,7 +19,7 @@ int _strlen(char *str)
 }
 
 /**
- * string_nconcat - concatenate two strings
+ * string_nconcat - concatenate two strings to n byte
  *
  * @s1: first string
  *
@@ -30,7 +30,7 @@ int _strlen(char *str)
  * Return: NULL on failure and pointer to location in memory on success
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconct(char *s1, char *s2, unsigned int n)
 {
 	char *buffer = 0;
 	int i = 0, len1 = 0, len2 = 0;
