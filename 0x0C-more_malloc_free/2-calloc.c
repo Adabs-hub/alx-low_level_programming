@@ -14,7 +14,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *buffer = 0;
-	int i;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (0);
@@ -26,5 +26,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	for (i = 0; i < nmemb * size; i++)
 		buffer[i] = 0;
-	return (jbuffer);
+	return (buffer);
 }
