@@ -19,39 +19,43 @@ int _strlen(char *s)
 	return (size);
 }
 
-
 /**
- * _strcat - concatenates two strings
+ * _strcpy - copy string
  *
- * @dest: 1st arg - destination string
+ * @dest: destination string arg
  *
- * @src: 2nd arg - source string
+ * @src: source string arg
  *
  * Return: destination string
  */
 
-char *_strcat(char *dest, char *src)
-{
-	int i = 0, dest_sz = 0, src_sz = 0;
 
-	dest_sz = _strlen(dest);
-	src_sz = _strlen(src);
-	while (i < src_sz)
-	{
-		dest[dest_sz] = src[i];
-		i++;
-		dest_sz++;
-	}
-	dest[dest_sz] = '\0';
+char *_strcpy(char *dest, char *src)
+{
+	int size = 0, j = 0;
+
+	while (src[size] != '\0')
+		size++;
+	for (j = 0; j < size; j++)
+		dest[j] = src[j];
+	dest[size] = '\0';
 	return (dest);
 }
+
+/**
+ * new_dog - create a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: pointer to new dog
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 
 	if (name != null && owner != null)
-	{	
+	{
 		dog = malloc(sizeof(dog_t));
 		if (!dog)
 		{
@@ -70,8 +74,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 
 		/*copy string dog*/
-		dog->name = _strcat(dog->name, name);
-		dog->owner = _strcat(dog->owner, owner);
+		dog->name = _strcpy(dog->name, name);
+		dog->owner = _strcpy(dog->owner, owner);
 	}
 	return (dog);
 }
