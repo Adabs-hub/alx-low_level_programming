@@ -2,6 +2,7 @@
 
 /**
  * int_index - search integer
+ * @array: array of element to search from
  * @size: size of array
  * @cmp: compare func
  * Return: index of searched element in array
