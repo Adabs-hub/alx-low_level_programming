@@ -2,7 +2,7 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	size_t i;
+	int i;
 
 	if (array != null && cmp != null && size > 0)
 		for (i = 0; i < size; i++)
