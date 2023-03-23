@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, start = 0;
 	char *p;
-	va_list list;
 
 	va_start(list, format);
 	while (format && format[i] != '\0')
@@ -25,7 +24,7 @@ void print_all(const char * const format, ...)
 				start = 1;
 				printf("%c", va_arg(list, int));
 				break;
-			case 'i':
+		case 'i':
 			switch (start)
 			{ case 1: printf(", "); }
 				start = 1;
