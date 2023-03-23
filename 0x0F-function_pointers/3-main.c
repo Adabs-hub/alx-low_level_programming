@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int (*cal)(int, int);
 
-	if (argc != 4 || argv[2][2] == '\0')
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
