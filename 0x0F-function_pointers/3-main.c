@@ -31,4 +31,6 @@ int main(int argc, char *argv[])
 		exit (100);
 	}
 	printf("%d\n", cal(atoi(argv[1]), atoi(argv[3])));
+
+	return (0);
 }
