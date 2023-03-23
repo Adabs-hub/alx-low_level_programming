@@ -8,10 +8,10 @@
 # Resources
 **Read or watch:**
 
-[stdarg.h](https://intranet.alxswe.com/rltoken/wLRJdO8pA2-Vb-rF2Y71sA)
-[Variadic Functions](https://intranet.alxswe.com/rltoken/wLRJdO8pA2-Vb-rF2Y71sA)
-[Const Keyword](https://intranet.alxswe.com/rltoken/_RRPCY32VODyN_r2HIEnBQ)
-[using variadic functions](https://www.youtube.com/watch?v=3iX9a_l9W9Yu)
+- [stdarg.h](https://intranet.alxswe.com/rltoken/wLRJdO8pA2-Vb-rF2Y71sA)
+- [Variadic Functions](https://intranet.alxswe.com/rltoken/wLRJdO8pA2-Vb-rF2Y71sA)
+- [Const Keyword](https://intranet.alxswe.com/rltoken/_RRPCY32VODyN_r2HIEnBQ)
+- [using variadic functions](https://www.youtube.com/watch?v=3iX9a_l9W9Yu)
 **man or help:**
 - stdarg
 # Learning Objectives
