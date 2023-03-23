@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (cal == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	if (atoi(argv[3]) == 0 || atoi(argv[1]) == 0)
 	{
