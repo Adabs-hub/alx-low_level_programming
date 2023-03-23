@@ -1,5 +1,11 @@
 #include "3-calc.h"
 
+/**
+ * get_op_func - get operator function
+ * @s: operator for selection  (char)
+ * Return: pointer to function pointer
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
