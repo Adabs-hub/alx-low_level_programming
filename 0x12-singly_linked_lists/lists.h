@@ -23,5 +23,6 @@ typedef struct list_s
 	size_t print_list(const list_t *h);
 	void print_number(size_t n);
 	void print_node(char *str, size_t len);
+	size_t list_len(const list_t *h);
 
 #endif /*list.h*/
