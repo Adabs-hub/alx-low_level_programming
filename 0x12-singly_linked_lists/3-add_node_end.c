@@ -2,6 +2,24 @@
 #include <string.h>
 
 
+/**
+ * _strlen - calculate lenght of strings
+ *
+ * @s: source string arg
+ *
+ * Return: size of string arg char*
+ */
+
+int _strlen(const char *s)
+{
+	int size = 0;
+
+	while (s[size] != '\0')
+		size++;
+
+	return (size);
+}
+
 
 /**
  * add_node_end - add node to head
