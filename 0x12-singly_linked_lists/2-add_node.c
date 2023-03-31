@@ -21,6 +21,12 @@ int _strlen(const char *s)
 	return (size);
 }
 
+/**
+ * add_node - add node to head
+ * @h: pointer to pointer to a list
+ * @str: string data
+ * Return: pointer to string
+ */
 
 list_t *add_node(list_t **h, const char *str)
 {
