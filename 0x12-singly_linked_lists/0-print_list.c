@@ -51,6 +51,8 @@ size_t print_list(const list_t *h)
 	size_t list_len = 0;
 	char *nil = "(nil)";
 
+	if (!h)
+		return (list_len);
 	do {
 		if (h->str == NULL)
 			print_node(nil, 0);
