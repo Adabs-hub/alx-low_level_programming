@@ -14,7 +14,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i = 0;
 
 	/*return null if head node is empty*/
-	if (*head == NULL)
+	if (*head == NULL || head == NULL)
 		return (NULL);
 
 	/*allocate memory for new node*/
@@ -27,6 +27,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	/*asing value to new node*/
 	tmp->n = n;
+	tmp->next = NULL;
 
 	/*assign next node to current head*/
 	next_node = *head;
@@ -41,7 +42,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*insert new node between next and previous nodes*/
 	tmp->next = next_node;
 	if (previous_node != NULL)
+	{
 		previous_node->next = tmp;
+	}
+	else
+	{
+		tmp->next = *head;
+		*head = tmp;
+	}
 
 	return (tmp);
 }
