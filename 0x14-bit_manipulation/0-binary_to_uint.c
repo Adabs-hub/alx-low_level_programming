@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * strlen - find string len
+ * _strlen - find string len
  * @b: char string
  * Return: len of string
  */
