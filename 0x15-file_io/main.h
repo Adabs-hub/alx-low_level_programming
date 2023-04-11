@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <stdio.h>
+#include <unistd.h>
 
 	int _putchar(char c);
 	int _strlen(char *s);
