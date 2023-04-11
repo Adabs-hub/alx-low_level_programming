@@ -3,6 +3,10 @@
 
 #include <stdlib.h>
 #include <stddef.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 	int _putchar(char c);
 	unsigned int _strlen(const char *b);
