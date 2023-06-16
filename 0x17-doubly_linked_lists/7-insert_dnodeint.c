@@ -8,9 +8,10 @@
  * Return: address to new node
  */
 
-dlistint_t *insert_dnodeint_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
+		unsigned int idx, int n)
 {
-	dlistint_t *new = NULL, *tmp = NULL, *h = NULL;
+	dlistint_t *new = NULL, *tmp = NULL, *head = NULL;
 	unsigned int count = 0;
 
 	new = malloc(sizeof(dlistint_t));
@@ -20,21 +21,22 @@ dlistint_t *insert_dnodeint_index(dlistint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	new->n = n, new->prev = NULL, new->next = NULL;
-	h = *head
-	if (h != NULL)
+	head = *h;
+	if ((*h) != NULL)
 	{
-		while (h->next != NULL)
+		while (head->next != NULL)
 		{
 			if (count == idx)
 			{
-				tmp = h->prev;
-				h->prev = new;
-				new->next = h;
+				tmp = head->prev;
+				head->prev = new;
+				new->next = head;
 				tmp->next = new;
 				new->prev = tmp;
 				return (new);
 			}
-			h = h->next;
+			head = head->next;
+			count++;
 		}
 	}
 
