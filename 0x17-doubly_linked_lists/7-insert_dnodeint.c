@@ -1,74 +1,47 @@
 #include "lists.h"
 
-
 /**
- * insert_dnodeint_at_index - add node at giving index of d-list
- * @h: head pointer d-list
- * @idx: index to add node
- * @n: value of new node
- * Return: address to new node
+ * insert_dnodeint_at_index - inserts a new node at a given position
+ * @h: doubly linkedlist
+ * @idx: index to insert new_node
+ * @n: value for new_node
+ * Return: address of new_node
  */
-
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
-		unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *head = NULL;
-	unsigned int size = 0;
+	dlistint_t *actual = *h;
+	dlistint_t *new_node = malloc(sizeof(dlistint_t));
+	unsigned int cnt;
 
-	head = *h;
-	for (size = 0; head != NULL; size++)
-		head = head->next;
-
-	if (size == 1)
-		head = add_dnodeint(h, n);
-	else if (size > 1 && idx <= size)
-		head = insert_inbetween_node(h, idx, n);
-	else if (size + 1  == idx)
-		head = add_dnodeint_end(h, n);
-	else
+	if (!h || !new_node)
 		return (NULL);
 
-	return (head);
-}
-/**
- * insert_inbetween_node - add node inbetween first and last node
- * @h: head pointer d-list
- * @idx: index to add node
- * @n: value of new node
- * Return: address to new node
- */
+	new_node->n = n;
 
-dlistint_t *insert_inbetween_node(dlistint_t **h,
-		unsigned int idx, int n)
-{
-	dlistint_t *new = NULL, *tmp = NULL, *head = NULL;
-	unsigned int count = 0;
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	if (!(*h))
 	{
-		free(new);
-		return (NULL);
+		new_node->prev = NULL;
+		new_node->next = NULL;
+		*h = new_node;
+		return (new_node);
 	}
-	new->n = n, new->prev = NULL, new->next = NULL;
-	head = *h;
-	if ((*h) != NULL)
+
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
+	for (cnt = 0; actual; cnt++)
 	{
-		while (head->next != NULL)
+		if (cnt == idx)
 		{
-			if (count == idx)
-			{
-				tmp = head->prev;
-				head->prev = new;
-				new->next = head;
-				tmp->next = new;
-				new->prev = tmp;
-				return (new);
-			}
-			head = head->next;
-			count++;
+			new_node->prev = actual->prev;
+			(actual->prev)->next = new_node;
+			actual->prev = new_node;
+			new_node->next = actual;
+			return (new_node);
 		}
+		else if (!actual->next && 1 + cnt == idx)
+			return (add_dnodeint_end(h, n));
+		actual = actual->next;
 	}
-
 	return (NULL);
 }
