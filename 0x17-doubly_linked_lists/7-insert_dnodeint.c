@@ -21,9 +21,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 
 	if (size == 1)
 		head = add_dnodeint(h, n);
-	else if (size > 1 && idx < size)
+	else if (size > 1 && idx <= size)
 		head = insert_inbetween_node(h, idx, n);
-	else if (size == idx)
+	else if (size + 1  == idx)
 		head = add_dnodeint_end(h, n);
 	else
 		return (NULL);
