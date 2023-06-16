@@ -4,6 +4,7 @@
  * add_dnodeint - add node to end of d-list
  * @head: head pointer d-list
  * @n: value of new node
+ * Return: address to new node
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
