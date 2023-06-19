@@ -13,21 +13,17 @@ int main(void)
     dlistint_t *head;
 
     head = NULL;
-    insert_dnodeint_at_index(&head, 0, 1000);
     add_dnodeint_end(&head, 0);
     add_dnodeint_end(&head, 1);
     add_dnodeint_end(&head, 2);
     add_dnodeint_end(&head, 3);
-    add_dnodeint_end(&head, 4);
-    add_dnodeint_end(&head, 98);
-    add_dnodeint_end(&head, 402);
-    add_dnodeint_end(&head, 1024);
     print_dlistint(head);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 0, 1000);
-    insert_dnodeint_at_index(&head, 5, 4096);
-    insert_dnodeint_at_index(&head, 7, 8000);
-    insert_dnodeint_at_index(&head, 11, 2030);
+    insert_dnodeint_at_index(&head, 6, 5);
+    insert_dnodeint_at_index(&head, 5, 5);
+    insert_dnodeint_at_index(&head, 1, 100);
+    insert_dnodeint_at_index(&head, 2, 200);
+    insert_dnodeint_at_index(&head, 3, 300);
     print_dlistint(head);
     free_dlistint(head);
     head = NULL;
