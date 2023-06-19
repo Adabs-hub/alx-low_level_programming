@@ -1,25 +1,5 @@
 #include "main.h"
 
-/**
- * _strlen - find string len
- *
- * @s: input string
- *
- * Return: string size
- */
-
-int _strlen(char *s)
-{
-	char c = s[0];
-	int size = 0;
-
-	while (c != '\0')
-	{
-		size++;
-		c = s[size];
-	}
-	return (size);
-}
 
 /**
  * _strcat - concatenates two strings
