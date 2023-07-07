@@ -10,14 +10,17 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *h_table = NULL;
 
-	h_table = malloc(sizeof(hash_table_t));
-	if (h_table == NULL)
+	if (size > 0)
 	{
-		free(h_table);
-		return (NULL);
+		h_table = malloc(sizeof(hash_table_t));
+		if (h_table == NULL)
+		{
+			free(h_table);
+			return (NULL);
+		}
+		h_table->size = size;
+		h_table->array = NULL;
 	}
-	h_table->size = size;
-	h_table->array = NULL;
 
 	return (h_table);
 }
