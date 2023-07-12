@@ -36,8 +36,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		array = array->next;
-		while (array->next != NULL)
+		while (array != NULL)
+		{
+			if (!strcmp(array->key, key))
+			{
+				strcpy(array->value, value);
+			}	
 			array = array->next;
 		array = tmp;
 
